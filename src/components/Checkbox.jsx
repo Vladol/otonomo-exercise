@@ -1,11 +1,12 @@
 import React from 'react'
 import './Checkbox.scss'
 
-function Checkbox({ type, children, ...props }) {
+function Checkbox({children, color = '#000000',  ...props }) {
+
   return (
     <label className="checkbox-label">
       <input type="checkbox" {...props} />
-      <span className="label">{children}</span>
+      <span className="label" style={{ color: color }}>{children}</span>
     </label>
   )
 }
